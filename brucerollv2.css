@@ -1,0 +1,15 @@
+//css for BruceRoll V2
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.commentsection {
+	padding: 5px;
+}
+
+.modal {
+    overflow-y: scroll;
+}

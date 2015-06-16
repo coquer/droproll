@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>BruceRoll 2.0</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="brucerollv2.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+  	<div class="container">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <!-- <button type="button" class="btn btn-default navbar-btn" id="logoutbutton">Log Out</button> -->
+		      <a class="navbar-brand" href="#">DropRoll</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li class="dropdown">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id='navbarname'>User</span><span class="caret"></span></a>
+			        	<ul class="dropdown-menu" role="menu">
+			        		<li><a href="#" id="logoutbutton">Log Out</a></li>
+			        	</ul>
+			    </li>    	
+		      </ul>
+		    </div>
+		   </div>    		
+		</nav>
+
+		<!-- Login -->
+		<div class="modal fade in" id="passwordbox" tabindex="-1" role="dialog" aria-labelledby="loginBoxLabel" aria-hidden="true" data-backdrop="static">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		      	<div id="alert" class="alert alert-warning" role="alert" style="display:none;">
+		      		
+		      		<span id="message" class="message">I don't think that is correct</span>
+		      	</div>
+
+		        
+		        	<div class="center-block">
+		        		<h3>Welcome to DropRoll</h3>
+		        		<form id="password">
+		        			
+		        			<div class="form-group">
+		        					<label for="name">Name (for commenting)</label>
+		        					<input type="text" class="form-control" id="name" placeholder="Name">
+								    <label for="loginpassword">Password</label>
+								    <input type="password" class="form-control" id="loginpassword" placeholder="Enter password">
+								  </div>
+								  <button type="submit" class="btn btn-primary">Enter</button>
+		        		</form>
+		        	</div>
+		        	
+		        
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!--- end login -->
+
+		<!--image viewer-->
+		<div id ="imageviewer" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="loginBoxLabel" aria-hidden="true" data-backdrop="static">
+			  <div  class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">DropRoll</h4>
+			      </div>
+			      <div id="imageviewerbody" class="modal-body">
+			        
+			      </div>
+			      
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+
+		<div class='row'>
+			<div class="col-xs-7">
+				<div id="postswrapper" style="display:none;">
+
+   
+   					<div id="loadmoreajaxloader" style="display:none;"><center><img src="ajax-loader.gif" /></center>
+   					</div>
+				</div>
+				<div id="footer">
+					<button type="button" id="loadmorebruce" class="btn btn-default btn-lg btn-block">Load More</button>
+				</div>
+				<br>
+
+					
+				
+			</div>
+
+			<div class="col-xs-4 col-xs-offset-1">
+				<div id="rightcolumn" class='thumbnail' style="display:none;">
+					<img src="bruceanimated1.gif" alt="...">
+					<div class="caption">
+						<h3>Some Header<p><small> followed by this </small></h3>
+						<p>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus bibendum urna nec pulvinar. Aliquam erat volutpat. Nullam luctus augue nulla, et fermentum quam pelle </span></a><span id="welcomemessage" style="display:none;">ntesque ut. Nulla facilisi. Aliquam molestie neque eget lacus porttitor pulvinar. Quisque a orci maximus, lacinia ante nec, molestie nisi. Aliquam erat volutpat. Mauris enim mi, venenatis dapibus ultrices ut, eleifend et augue. Vivamus sollicitudin viverra libero, non vulputate tellus ullamcorper id. Proin sit amet commodo quam. Proin luctus elit quis rutrum sagittis. Nunc mattis lacus a nibh eleifend, ac tempor risus venenatis. Curabitur iaculis, diam at eleifend consequat, est est pellentesque enim, id commodo ante tortor ut purus. Praesent id mi cursus, luctus dolor et, efficitur lacus. <br></span><a href='#' id='morewelcome'>...more</a><span class="caret"></span></p>
+
+						<br>
+
+						<div id="commentcharts"></div>
+						
+					</div>
+				</div>
+			</div>	
+		</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    
+    <script src="commander.js"></script>
+   </div>
+  </body>
+</html>
